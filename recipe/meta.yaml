@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "1.3.0" %}
-{% set sha256 = "800b8c4727a74b8656d203a53b9796da1ff4dd01d31a32b243130f0458f873b1" %}
+{% set version = "1.4.0" %}
+{% set sha256 = "8c0566ba4bbb7f7b5d867d32eabee5b2084059c8b6021004653f5f27d38ae5ad" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://bitbucket.org/glotzer/{{ name }}/get/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -39,7 +39,7 @@ about:
   home: https://bitbucket.org/glotzer/gsd
   license: BSD-2-Clause
   license_family: BSD
-  license_file: LICENSE
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
   summary: 'General simulation data'
 
   description: |
