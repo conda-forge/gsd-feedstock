@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
 {% set version = "1.4.0" %}
-{% set sha256 = "ba212674d7bfcdf8913751d03bcfc3a14e8efe85e45d6b11a670d33a62467b05" %}
+{% set sha256 = "8a86c2dec59a8da7c350437f49457dd21fbb4fa2e267d7c4944723f92b577e8b" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://bitbucket.org/glotzer/{{ name }}/get/v{{ version }}.tar.gz
+  url: https://glotzerlab.engin.umich.edu/Downloads/{{ name }}/{{ name }}-v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
