@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "ba212674d7bfcdf8913751d03bcfc3a14e8efe85e45d6b11a670d33a62467b05" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "bd0ffcbdeba9e1a4c70c420867416edf9400e20aa348bac8a5d5cbcf27419166" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://bitbucket.org/glotzer/{{ name }}/get/v{{ version }}.tar.gz
+  url: https://glotzerlab.engin.umich.edu/Downloads/{{ name }}/{{ name }}-v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
