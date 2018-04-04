@@ -12,8 +12,6 @@ Summary: General simulation data
 GSD (General Simulation Data) is a file format specification
 and a library to read and write it. The package also contains a python module
 that reads and writes hoomd schema gsd files with an easy to use syntax.
-doc_url: https://signac.readthedocs.io dev_url:
-https://bitbucket.org/glotzer/signac
 
 
 Current build status
