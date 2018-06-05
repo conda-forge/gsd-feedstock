@@ -12,21 +12,21 @@ Summary: General simulation data
 GSD (General Simulation Data) is a file format specification
 and a library to read and write it. The package also contains a python module
 that reads and writes hoomd schema gsd files with an easy to use syntax.
-doc_url: https://signac.readthedocs.io dev_url:
-https://bitbucket.org/glotzer/signac
 
 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/gsd-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/gsd-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/gsd-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/gsd-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/gsd-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/gsd-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/gsd-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/gsd-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/gsd/badges/version.svg)](https://anaconda.org/conda-forge/gsd)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/gsd/badges/downloads.svg)](https://anaconda.org/conda-forge/gsd)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-gsd-green.svg)](https://anaconda.org/conda-forge/gsd) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gsd.svg)](https://anaconda.org/conda-forge/gsd) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gsd.svg)](https://anaconda.org/conda-forge/gsd) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gsd.svg)](https://anaconda.org/conda-forge/gsd) |
 
 Installing gsd
 ==============
