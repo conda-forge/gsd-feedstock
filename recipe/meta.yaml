@@ -12,28 +12,38 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
+  # the upstream package does not support windows
   skip: true  # [win]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
-    - python
+    - {{ compiler('c') }}
+
+  host:
     - setuptools
-    - numpy 1.11.*
     - cython
-    - toolchain
+    - python
+    - numpy
 
   run:
     - python
-    - numpy >=1.11
+    - {{ pin_compatible('numpy') }}
 
 test:
+  requires:
+    - nose
   imports:
     - gsd
     - gsd.fl
     - gsd.pygsd
     - gsd.hoomd
+  source_files:
+    - tests/
+    - setup.cfg
+  commands:
+    - nosetests  # [py3k]
 
 about:
   home: https://bitbucket.org/glotzer/gsd
