@@ -43,7 +43,7 @@ test:
     - tests/
     - setup.cfg
   commands:
-    - nosetests
+    - nosetests  # [py3k]
 
 about:
   home: https://bitbucket.org/glotzer/gsd
