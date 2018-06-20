@@ -33,11 +33,18 @@ requirements:
     - {{ pin_compatible('numpy') }}
 
 test:
+  requires:
+    - nose
   imports:
     - gsd
     - gsd.fl
     - gsd.pygsd
     - gsd.hoomd
+  source_files:
+    - tests/
+    - setup.cfg
+  commands:
+    - nosetests
 
 about:
   home: https://bitbucket.org/glotzer/gsd
