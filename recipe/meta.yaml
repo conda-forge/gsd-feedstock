@@ -12,16 +12,17 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   # the upstream package does not support windows
   skip: true  # [win]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
+    - {{ pin_compatible('numpy') }}
     - {{ compiler('c') }}
-
   host:
+    - {{ compiler('c') }}
     - setuptools
     - cython
     - python
@@ -29,7 +30,6 @@ requirements:
 
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   requires:
