@@ -23,8 +23,6 @@ requirements:
     - {{ compiler('c') }}
   host:
     - {{ compiler('c') }}
-
-  host:
     - setuptools
     - cython
     - python
