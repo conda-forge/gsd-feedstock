@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "1.5.3" %}
-{% set sha256 = "84fad6e1c60e80ad8a4c911efe1af11e4e74f66b315e5b8336a1861f432c76ee" %}
+{% set version = "1.5.4" %}
+{% set sha256 = "09b09f1316c809dae96b1a02972673ef928eb549fcc1cae484265590a5b4acff" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # the upstream package does not support windows
   skip: true  # [win]
   script: python setup.py install --single-version-externally-managed --record record.txt
