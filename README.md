@@ -5,7 +5,7 @@
 About gsd
 =========
 
-Home: https://bitbucket.org/glotzer/gsd
+Home: https://github.com/glotzerlab/gsd
 
 Package license: BSD-2-Clause
 
@@ -117,5 +117,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bdice](https://github.com/bdice/)
 * [@joaander](https://github.com/joaander/)
 
