@@ -47,7 +47,7 @@ test:
     - nosetests  # [py3k]
 
 about:
-  home: https://bitbucket.org/glotzer/gsd
+  home: https://github.com/glotzerlab/{{ name }}
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
@@ -59,8 +59,9 @@ about:
    that reads and writes hoomd schema gsd files with an easy to use syntax.
 
   doc_url: https://gsd.readthedocs.io
-  dev_url: https://bitbucket.org/glotzer/gsd
+  dev_url: https://github.com/glotzerlab/{{ name }}
 
 extra:
   recipe-maintainers:
+    - bdice
     - joaander
