@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "1.6.0" %}
-{% set sha256 = "2d4ddacbea75b36a446a41c5df8ba16d793c5f1674e001795393931f96d0f4e9" %}
+{% set version = "1.6.1" %}
+{% set sha256 = "45edc981a5899ca7fb81205a3c1a3a07d58ea955f877fdd63e2a3e15d5ead41e" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 0
   # the upstream package does not support windows
   skip: true  # [win]
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
