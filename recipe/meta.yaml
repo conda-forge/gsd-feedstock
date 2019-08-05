@@ -25,12 +25,12 @@ requirements:
   host:
     - setuptools
     - cython
-    - python >=3
+    - python
     - numpy
     - pip
 
   run:
-    - python >=3
+    - python
     - {{ pin_compatible('numpy') }}
 
 test:
@@ -45,7 +45,7 @@ test:
     - tests/
     - setup.cfg
   commands:
-    - nosetests  # [py3k]
+    - nosetests
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
