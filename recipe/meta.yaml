@@ -12,9 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  # the upstream package does not support windows
+  number: 1
+  # the upstream package does not support windows or python2.7
   skip: true  # [win]
+  skip: true  # [py27]
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
 
 requirements:
@@ -44,7 +45,7 @@ test:
     - tests/
     - setup.cfg
   commands:
-    - nosetests  # [py3k]
+    - nosetests
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
