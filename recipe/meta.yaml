@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "1.8.0" %}
-{% set sha256 = "f6a99e86198a2f01e9a33b6d5eafed5ed82fa7084e1661316ac06a660e2f809d" %}
+{% set version = "1.8.1" %}
+{% set sha256 = "bb38d00b83b982904aade2013d0072f66c84faa52cec01df1b23cbbf62707b68" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # the upstream package does not support windows or python2.7
   skip: true  # [win]
   skip: true  # [py27]
