@@ -35,7 +35,7 @@ requirements:
 
 test:
   requires:
-    - nose
+    - pytest
   imports:
     - gsd
     - gsd.fl
@@ -45,7 +45,7 @@ test:
     - tests/
     - setup.cfg
   commands:
-    - nosetests
+    - pytest
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
