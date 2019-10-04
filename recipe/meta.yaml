@@ -13,8 +13,7 @@ source:
 
 build:
   number: 0
-  # the upstream package does not support windows or python2.7
-  skip: true  # [win]
+  # the upstream package does not support python2.7
   skip: true  # [py27]
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
 
