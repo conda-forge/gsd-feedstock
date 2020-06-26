@@ -44,7 +44,7 @@ test:
     - tests/
     - setup.cfg
   commands:
-    - pytest
+    - pytest --ignore-glob="*_largefile.py"
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
