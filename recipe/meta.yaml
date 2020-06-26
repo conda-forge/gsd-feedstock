@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "2.1.1" %}
-{% set sha256 = "c189dfab9dd8a44ad4512a1ba7c1be8ba3506f227eb795cf2bb8afb3ddb2e4e7" %}
+{% set version = "2.1.2" %}
+{% set sha256 = "093e1493d10cc8820bbcfa9dce35f1669c1f2c09a6bb7dc7d85b7587013a0375" %}
 
 package:
   name: {{ name|lower }}
@@ -44,7 +44,7 @@ test:
     - tests/
     - setup.cfg
   commands:
-    - pytest
+    - pytest --ignore-glob="*_largefile.py"
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
