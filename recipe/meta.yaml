@@ -43,7 +43,7 @@ test:
   source_files:
     - setup.cfg
   commands:
-    - pytest --pyargs gsd --ignore-glob="*_largefile.py"
+    - pytest --pyargs gsd -v -ra --ignore-glob="*_largefile.py"
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
