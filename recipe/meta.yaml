@@ -41,10 +41,9 @@ test:
     - gsd.pygsd
     - gsd.hoomd
   source_files:
-    - tests/
     - setup.cfg
   commands:
-    - pytest --ignore-glob="*_largefile.py"
+    - pytest --pyargs gsd --ignore-glob="*_largefile.py"
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
