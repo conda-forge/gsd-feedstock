@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "2.2.0" %}
-{% set sha256 = "80c7f0c71768896c422868a0abca67a2d187fafc993cc3b6ceffd33919ed6828" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "02aada0ce197de112822f4a41911796b3e95554223069f3728bb9a6dc96fc457" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # the upstream package does not support python2.7
   skip: true  # [py27]
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
@@ -41,10 +41,10 @@ test:
     - gsd.pygsd
     - gsd.hoomd
   source_files:
-    - tests/
     - setup.cfg
   commands:
-    - pytest --ignore-glob="*_largefile.py"
+    - cd /
+    - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
