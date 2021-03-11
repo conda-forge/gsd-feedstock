@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "2.4.0" %}
-{% set sha256 = "40c6d7116c45d0589fa52896ea35a0b202f282b412163c3764b3738f95f66eec" %}
+{% set version = "2.4.1" %}
+{% set sha256 = "68ad825d87c62513d575b81b8bfd1cff66121cca89a3328e3c10d03db6674a75" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ build:
   number: 0
   # the upstream package does not support python2.7
   skip: true  # [py27]
-  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   build:
@@ -55,12 +55,12 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'General simulation data'
+  summary: General simulation data
 
   description: |
-   GSD (General Simulation Data) is a file format specification
-   and a library to read and write it. The package also contains a python module
-   that reads and writes hoomd schema gsd files with an easy to use syntax.
+    GSD (General Simulation Data) is a file format specification
+    and a library to read and write it. The package also contains a python module
+    that reads and writes hoomd schema gsd files with an easy to use syntax.
 
   doc_url: https://gsd.readthedocs.io
   dev_url: https://github.com/glotzerlab/{{ name }}
