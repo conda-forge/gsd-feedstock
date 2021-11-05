@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # the upstream package does not support python2.7
-  skip: true  # [py27]
+  skip: true  # [py<=27]
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
