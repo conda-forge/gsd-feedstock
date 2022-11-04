@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "2.6.0" %}
-{% set sha256 = "f3d7b9a3ceb210d5b494da6207bd6b61c606b4edcb5bb6bcd0fc490a02af736f" %}
+{% set version = "2.6.1" %}
+{% set sha256 = "446f4cf54272e10d737d77033d37416e38c8ec77209393f214191a48b1c1c5be" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # the upstream package does not support python2.7
   skip: true  # [py<=27]
   script: {{ PYTHON }} -m pip install . -vv --no-deps
