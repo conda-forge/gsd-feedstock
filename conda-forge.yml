@@ -11,4 +11,4 @@ provider:
   linux_ppc64le: default
 test_on_native_only: true
 conda_build:
-  pkg_format: null
+  pkg_format: '2'
