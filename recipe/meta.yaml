@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "2.9.0" %}
-{% set sha256 = "6627938b617211bfe3e0bba27caf1e311f29182bb543864138581ef93d2e898a" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "ef002016aaec26ce75cf2031f24532c6bb31c1efa1107ebc87d0229fd730d02a" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/glotzerlab/{{ name }}/releases/download/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
+  url: https://github.com/glotzerlab/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
