@@ -1,6 +1,6 @@
 {% set name = "gsd" %}
-{% set version = "3.2.0" %}
-{% set sha256 = "6fc7a9293d379032fc7d207884c0a50fe686b02ee5b8ebf3433989e2086f47c2" %}
+{% set version = "3.2.1" %}
+{% set sha256 = "49a0e16276789b6953ece7e5a678bd22c128f8cc57cb967f4228ff6487770995" %}
 
 package:
   name: {{ name|lower }}
