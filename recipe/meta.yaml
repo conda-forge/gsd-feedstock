@@ -44,8 +44,6 @@ test:
     - gsd.fl
     - gsd.pygsd
     - gsd.hoomd
-  source_files:
-    - setup.cfg
   commands:
     - cd /
     - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
