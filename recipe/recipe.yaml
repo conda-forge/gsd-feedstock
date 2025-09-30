@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: gsd
   version: 4.1.0
+  minimum_python: "3.11"
 
 package:
   name: ${{ name }}
@@ -15,6 +16,8 @@ source:
 build:
   number: 0
   script: ${{ PYTHON }} -m pip install . -vv --no-deps
+  python:
+    version_independent: true
 
 requirements:
   build:
@@ -22,32 +25,46 @@ requirements:
     - {{ stdlib("c") }}
     - if: build_platform != target_platform
       then:
-        - python                                 
+        - python      ${{ minimum_python }}.*
+        - python-abi3 ${{ minimum_python }}.*
         - cross-python_${{ target_platform }}
         - cython >= 3.1
-        - numpy >=2                                  
+        - numpy >=2
 
   host:
-    - setuptools >=77
     - cython >=3.1
-    - python
+    - python      ${{ minimum_python }}.*
+    - python-abi3 ${{ minimum_python }}.*
     - numpy >=2
     - pip
+    - setuptools >=77
 
   run:
     - python
 
 tests:
+  # Test with both minimum and current python versions
   - script:
     - cd /
     - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
     requires:
       - pytest
+    python_version: ["${{ minimum_python ~ '.*' }}"]
+
+  - script:
+    - cd /
+    - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
+    requires:
+      - pytest
+  - script:
+      - abi3audit --strict --verbose ${SP_DIR}/gsd/*.so
+    requirements:
+      run:
+        - abi3audit
 
 about:
   homepage: https://github.com/glotzerlab/${{ name }}
   license: BSD-2-Clause
-  license: BSD
   license_file: LICENSE
   summary: General simulation data
 
