@@ -59,7 +59,7 @@ tests:
       run:
       - pytest
   - script:
-      - abi3audit --strict --verbose ${SP_DIR}/gsd/*.so
+      - abi3audit --strict --verbose --assume-minimum-abi3 ${{ minimum_python }} ${SP_DIR}/gsd/fl.abi3.so
     requirements:
       run:
         - abi3audit
