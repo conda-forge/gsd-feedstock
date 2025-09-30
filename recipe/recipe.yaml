@@ -21,8 +21,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
     - if: build_platform != target_platform
       then:
         - python      ${{ minimum_python }}.*
@@ -47,14 +47,16 @@ tests:
   - script:
     - cd /
     - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
-    requires:
+    requirements:
+      run:
       - pytest
-    python_version: ["${{ minimum_python ~ '.*' }}"]
+      - python ["${{ minimum_python ~ '.*' }}"]
 
   - script:
     - cd /
     - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
-    requires:
+    requirements:
+      run:
       - pytest
   - script:
       - abi3audit --strict --verbose ${SP_DIR}/gsd/*.so
