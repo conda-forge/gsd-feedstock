@@ -28,7 +28,7 @@ requirements:
         - python      ${{ minimum_python }}.*
         - python-abi3 ${{ minimum_python }}.*
         - cross-python_${{ target_platform }}
-        - cython >= 3.1
+        - cython >=3.1
         - numpy >=2
 
   host:
@@ -50,7 +50,7 @@ tests:
     requirements:
       run:
       - pytest
-      - python ["${{ minimum_python ~ '.*' }}"]
+      - python ${{ minimum_python ~ '.*' }}
 
   - script:
     - cd /
