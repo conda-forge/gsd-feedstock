@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: gsd
-  version: 4.1.0
+  version: "4.2.0"
   minimum_python: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/glotzerlab/${{ name }}/releases/download/v${{ version }}/gsd-${{ version }}.tar.gz
-  sha256: 24668bb44e89e5fd93f598433f711e3f11fa226fb6b73e5c8f3b1f9ba40f4692
+  sha256: 4c6b02976dfae2e61e59ebb11fd069181297979bd750f3f1253b5ad5c8915960
 
 build:
   number: 0
@@ -45,19 +45,19 @@ requirements:
 tests:
   # Test with both minimum and current python versions
   - script:
-    - cd /
-    - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
+      - cd /
+      - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
     requirements:
       run:
-      - pytest
-      - python ${{ minimum_python ~ '.*' }}
+        - pytest
+        - python ${{ minimum_python ~ '.*' }}
 
   - script:
-    - cd /
-    - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
+      - cd /
+      - pytest --pyargs gsd -v -ra --ignore-glob="*largefile*"
     requirements:
       run:
-      - pytest
+        - pytest
   # SP_DIR is not set in tests. It is not clear how to actually run abi3audit here.
   # - script:
   #     - abi3audit --strict --verbose --assume-minimum-abi3 ${{ minimum_python }} ${SP_DIR}/gsd/fl.abi3.so
