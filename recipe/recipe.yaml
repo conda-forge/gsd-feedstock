@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: gsd
-  version: "5.0.0"
+  version: "5.0.1"
   minimum_python: "3.11"
 
 package:
@@ -10,8 +10,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://github.com/glotzerlab/${{ name }}/releases/download/v${{ version }}/gsd-${{ version }}.tar.gz
-  sha256: e71ee85ab0ab577ee655422504d9eb5c74b378c940b4dbe12d93ffc7d72c9a0a
+  url: https://github.com/glotzerlab/${{ name }}/releases/download/v${{ version }}/gsd-${{ version }}.tar.zst
+  sha256: 78ee3668f5614f1ac87681a14b0d3b5a908b0300a6d62472b73ab9fd271525e6
 
 build:
   number: 0
